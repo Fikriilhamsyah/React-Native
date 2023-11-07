@@ -3,7 +3,33 @@ import { Image, Text, View } from 'react-native';
 import Photo from '../../assets/image/img-1.png';
 
 class FlexBox extends Component {
+    constructor (props) {
+        super(props);
+        console.log('==> constructor');
+        this.state = {
+            subscriber : 200,
+        }
+    }
+
+    componentDidMount() {
+        console.log('==> component did mount');
+        setTimeout(() => {
+            this.setState({
+                subscriber: 400,
+            });
+        }, 2000);
+    }
+
+    componentDidUpdate() {
+        console.log('==> component did update');
+    }
+
+    componentWillUnmount() {
+        console.log('==> component will unmount');
+    }
+
     render (){
+        console.log('==> render');
         return (
             <View style={{marginVertical: 60}}>
                 <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#C8D6E5'}}>
@@ -25,7 +51,7 @@ class FlexBox extends Component {
                     <Image source={Photo} style={{width: 60, height: 60, borderRadius: 50}} />
                     <View style={{marginLeft: 10}}>
                         <Text style={{fontSize: 18, fontWeight: '600', color: 'black'}}>Muhammad Fikri Ilhamsyah</Text>
-                        <Text>Muhammad Fikri Ilhamsyah</Text>
+                        <Text>{this.state.subscriber} ribu subscriber</Text>
                     </View>
                 </View>
             </View>
