@@ -6,11 +6,11 @@ export default function Position() {
   return (
     <View style={styles.wrapper}>
         <Text style={{marginBottom: 40, fontSize: 18, fontWeight: '700'}}>Materi Position</Text>
-      <View style={styles.cartWrapper}>
-        <Image source={Cart} style={styles.iconCart} />
-        <Text style={styles.notif}>10</Text>
-      </View>
-      <Text style={styles.text}>Keranjang Belanja Anda</Text>
+        <View style={styles.cartWrapper}>
+          <Image source={Cart} style={styles.iconCart} />
+          <Text style={styles.notif}>10</Text>
+        </View>
+        <Text style={styles.text}>Keranjang Belanja Anda</Text>
     </View>
   );
 };
